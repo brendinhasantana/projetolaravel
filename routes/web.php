@@ -30,7 +30,7 @@ Route::get('/hello/{nome}', function ($nome) {
 Route::get('/conta/{numero1}/{numero2}/{operacao?}', function ($numero1, $numero2, $operacao='') {
     switch($operacao){  
         case "soma":
-            $resultado = $numero1 + $numero2;
+            $resultado = $numero1 + $numero2; 
             echo 'Soma : ' . $resultado;    
             break;
         case 'subtração':
