@@ -31,7 +31,7 @@ Route::get('/conta/{numero1}/{numero2}/{operacao?}', function ($numero1, $numero
     switch($operacao){  
         case "soma":
             $resultado = $numero1 + $numero2; 
-            echo 'Soma : ' . $resultado;    
+            echo 'Soma : ' . $resultado;        
             break;
         case 'subtração':
             $resultado = $numero1 - $numero2;
