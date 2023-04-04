@@ -36,7 +36,7 @@ Route::get('/conta/{numero1}/{numero2}/{operacao?}', function ($numero1, $numero
         case 'subtração':
             $resultado = $numero1 - $numero2;
             echo 'Subtração :' . $resultado;
-            break;      
+            break;    
         case 'multiplicação':
             $resultado = $numero1 * $numero2;
             echo 'Multiplicação: ' . $resultado;
@@ -58,24 +58,6 @@ Route::get('/conta/{numero1}/{numero2}/{operacao?}', function ($numero1, $numero
     };
 })->name('operations');
 //php artisan serve
-
-Route::get('/idade/{ano?}/{mês?}/{dia?}', function ($ano,$mês,$dia) {
-
-    $entrada = new DateTime(2022-04-01);
-    $saída= new DateTime($ano,$mês,$dia); 
-    $idade = $entrada->diff($saída);
-
-    echo $idade;
-
-
-
-
-
-    //if(empty($mês) || (empty($dia))){
-        //$idade = $entrada->diff($saída);
-        //echo $idade;
-    //}
-});
 
 
 
