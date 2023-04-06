@@ -10,10 +10,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hi/{nome}', [EventController::class, 'name'])->name('hi');
+Route::get('/hello/{nome}', function ($nome) {
+    if  (strlen($nome) < 3  || (is_numeric($nome))){
+        echo 'Insira um nome válido';
+    }  
+    else{
+        echo 'Olá '.$nome .' seja bem-vindo ao meu site';
+    }
+})->name('nome');
 
-
-Route::get('/contas/{numero1}/{numero2}/{operacao?}', [EventController::class, 'contas'])->name('contas');
 
 Route::get('/conta/{numero1}/{numero2}/{operacao?}', function ($numero1, $numero2, $operacao = '') {
     switch ($operacao) {
