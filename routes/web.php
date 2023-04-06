@@ -50,9 +50,6 @@ Route::get('/conta/{numero1}/{numero2}/{operacao?}', function ($numero1, $numero
             break;
     };
 })->name('operations');
-//php artisan serve
-
-Route::get('/years/{ano}/{mes?}/{dia?}',[EventController::class, 'years'])->name('years');
 
 Route::get('/idade/{ano}/{mes?}/{dia?}', function (int $ano, int $mes=0, int $dia=0) {
 
